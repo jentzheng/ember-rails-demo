@@ -1,0 +1,19 @@
+<article class="post media well">
+  {{#if post.featured}}
+  <div class="media-right pull-right">
+    <img class="media-object" src="{{post.featured.urlSquare}}" width="120" alt="">
+  </div>
+  {{/if}}
+
+  <div class="media-body">
+    <h2 class="post__title media-heading">
+      {{#link-to "post" post}} {{post.title}} {{/link-to}}
+    </h2>
+    <div class="post__author">
+      {{#link-to 'user' post.user}} <img src="{{post.user.avatarUrl}}" alt="" height='24'> {{post.user.email}} {{/link-to}}
+    </div>
+    <div class="post__body">
+      {{post.body}}
+    </div>
+  </div>
+</article>

@@ -1,0 +1,22 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>avatar</th>
+        <th>id</th>
+        <th>email</th>
+        <th>posts count</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each user in model }}
+      <tr>
+        <td> <img height="24px" src="{{user.avatarUrl}}" alt="avatar"> </td>
+        <td> {{user.id}} </td>
+        <td> {{user.email}} </td>
+        <td> {{user.posts.length}} </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

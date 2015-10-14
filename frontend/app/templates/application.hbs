@@ -1,0 +1,17 @@
+<div class="page">
+  <div class="navbar navbar-static-top navbar-inverse">
+    <div class="navbar-header">
+      {{#link-to "index" class="navbar-brand"}}Ember Rails Demo{{/link-to}}
+    </div>
+    <ul class="nav navbar-nav">
+      <li> {{#link-to "posts"}} Post Index {{/link-to}} </li>
+      <li> {{#link-to "users"}} User Index {{/link-to}} </li>
+    </ul>
+  </div>
+
+  <main> {{outlet}} </main>
+  <footer>
+    footer
+  </footer>
+</div>
+

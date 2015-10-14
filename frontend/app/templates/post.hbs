@@ -1,0 +1,32 @@
+<div class="container">
+  <article class="post">
+    <div class="thumbnail">
+      <img src="{{model.featured.url}}" alt="{{model.featured.title}}">
+      <div class="caption"> {{model.featured.context}} </div>
+    </div>
+
+    <h1>{{model.title}}</h1>
+    {{model.user.email}}
+    <div class="post__body"> {{model.body}} </div>
+
+    <ul class="post__audios">
+      {{#each audio in model.audios}}
+        <li><a href="{{audio.url}}">{{audio.context}}</a></li>
+      {{/each}}
+    </ul>
+
+    <div class="row">
+    {{#each image in model.images}}
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img class="img-responsive" src="{{image.urlSquare}}" alt="{{image.title}}">
+          <div class="caption">
+            {{image.context}}
+          </div>
+        </div>
+      </div>
+    {{/each}}
+    </div>
+  </article>
+</div>
+

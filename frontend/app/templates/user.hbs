@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img class="img-responsive" src="{{model.avatarUrl}}" alt="" />
+        <div class="caption">
+          {{model.email}}
+          <br>
+          {{model.userProfile.firstName}} {{model.userProfile.lastName}}
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      {{#each post in model.posts}}
+        {{#post-teaser post=post}}{{/post-teaser}}
+      {{/each}}
+    </div>
+  </div>
+</div>
